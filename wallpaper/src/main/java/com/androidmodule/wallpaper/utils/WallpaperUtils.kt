@@ -1,5 +1,5 @@
 package com.androidmodule.wallpaper.utils
 
-object GuideUtils {
+object WallpaperUtils {
     var baseUrl: String? = null
 }

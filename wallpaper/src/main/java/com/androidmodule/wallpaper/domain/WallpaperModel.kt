@@ -1,7 +1,10 @@
 package com.androidmodule.wallpaper.domain
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.parcelize.Parcelize
 
+@Parcelize
 data class WallpaperModel(
 
 	@field:SerializedName("sizeNativeHome")
@@ -39,8 +42,9 @@ data class WallpaperModel(
 
 	@field:SerializedName("isWithCategory")
 	val isWithCategory: Boolean? = null
-)
+): Parcelable
 
+@Parcelize
 data class WallpapersItem(
 
 	@field:SerializedName("extension")
@@ -54,8 +58,9 @@ data class WallpapersItem(
 
 	@field:SerializedName("url")
 	val url: String? = null
-)
+): Parcelable
 
+@Parcelize
 data class WallpapersWithCategoryItem(
 
 	@field:SerializedName("image")
@@ -69,4 +74,4 @@ data class WallpapersWithCategoryItem(
 
 	@field:SerializedName("categoryName")
 	val categoryName: String? = null
-)
+): Parcelable

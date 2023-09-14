@@ -5,7 +5,7 @@ import retrofit2.http.GET
 import retrofit2.http.Query
 
 interface ApiService {
-    @GET("wallpaper/apps")
+    @GET("apps")
     suspend fun getData(
         @Query("packageName") packageName: String?
     ): WallpaperModel

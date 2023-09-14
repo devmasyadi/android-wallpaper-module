@@ -1,10 +1,9 @@
-package com.androidmodule.wallpaper.di
+package com.google.android.wallapp.di
 
-import com.androidmodule.wallpaper.BuildConfig
-import com.androidmodule.wallpaper.data.Repository
-import com.androidmodule.wallpaper.data.remote.ApiService
-import com.androidmodule.wallpaper.utils.WallpaperUtils
-import com.androidmodule.wallpaper.viewmodel.WallpaperViewModel
+import com.google.android.wallapp.data.Repository
+import com.google.android.wallapp.data.remote.ApiService
+import com.google.android.wallapp.utils.WallpaperUtils
+import com.google.android.wallapp.viewmodel.WallpaperViewModel
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import org.koin.android.viewmodel.dsl.viewModel
@@ -26,12 +25,14 @@ val wallpaperModule = module(override = true) {
     }
 
     single {
-        val retrofit = Retrofit.Builder()
-            .baseUrl(WallpaperUtils.baseUrl ?: BuildConfig.BASE_URL)
-            .addConverterFactory(GsonConverterFactory.create())
-            .client(get())
-            .build()
-        retrofit.create(ApiService::class.java)
+        val retrofit = WallpaperUtils.style?.let { url ->
+            Retrofit.Builder()
+                .baseUrl(url)
+                .addConverterFactory(GsonConverterFactory.create())
+                .client(get())
+                .build()
+        }
+        retrofit?.create(ApiService::class.java)
     }
 
     single { Repository(get()) }

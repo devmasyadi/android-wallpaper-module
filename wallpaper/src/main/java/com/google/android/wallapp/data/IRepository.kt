@@ -1,6 +1,6 @@
-package com.androidmodule.wallpaper.data
+package com.google.android.wallapp.data
 
-import com.androidmodule.wallpaper.domain.WallpaperModel
+import com.google.android.wallapp.domain.WallpaperModel
 import kotlinx.coroutines.flow.Flow
 
 interface IRepository {

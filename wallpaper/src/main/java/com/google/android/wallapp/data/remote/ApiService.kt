@@ -1,6 +1,6 @@
-package com.androidmodule.wallpaper.data.remote
+package com.google.android.wallapp.data.remote
 
-import com.androidmodule.wallpaper.domain.WallpaperModel
+import com.google.android.wallapp.domain.WallpaperModel
 import retrofit2.http.GET
 import retrofit2.http.Query
 

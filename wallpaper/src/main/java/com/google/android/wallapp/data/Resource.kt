@@ -1,4 +1,4 @@
-package com.androidmodule.wallpaper.data
+package com.google.android.wallapp.data
 
 sealed class Resource<T>(val data: T? = null, val message: String? = null) {
     class Success<T>(data: T) : Resource<T>(data)

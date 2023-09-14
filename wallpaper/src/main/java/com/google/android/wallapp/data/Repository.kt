@@ -1,7 +1,7 @@
-package com.androidmodule.wallpaper.data
+package com.google.android.wallapp.data
 
-import com.androidmodule.wallpaper.data.remote.ApiService
-import com.androidmodule.wallpaper.domain.WallpaperModel
+import com.google.android.wallapp.data.remote.ApiService
+import com.google.android.wallapp.domain.WallpaperModel
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
